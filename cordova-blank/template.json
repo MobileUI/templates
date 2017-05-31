@@ -1,0 +1,10 @@
+{
+  "name":"cordova-blank",
+  "author": "fabiorogeriosj",
+  "files":[
+    "css/index.css",
+    "js/index.js",
+    "img/logo.png",
+    "index.html"
+  ]
+}
