@@ -8,6 +8,7 @@
     "map/empty.txt",
     "music/music1.mp3",
     "sound/ping.mp3",
+    "lib/phaser.min.js",
     "index.html"
   ]
 }
