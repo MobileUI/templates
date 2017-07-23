@@ -1,0 +1,13 @@
+{
+  "name":"cordova-phaser",
+  "author": "fabiorogeriosj",
+  "files":[
+    "css/index.css",
+    "js/index.js",
+    "img/logo.png",
+    "map/empty.txt",
+    "music/music1.mp3",
+    "sound/ping.mp3",
+    "index.html"
+  ]
+}
