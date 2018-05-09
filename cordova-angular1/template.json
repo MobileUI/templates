@@ -1,0 +1,11 @@
+{
+  "name":"cordova-angular1",
+  "author": "fabiorogeriosj",
+  "files":[
+    "css/index.css",
+    "js/index.js",
+    "lib/angular.min.js",
+    "img/logo.png",
+    "index.html"
+  ]
+}
