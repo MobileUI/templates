@@ -2,15 +2,83 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="mobileui/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MobileUI Vue.js</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- MobileUI -->
+  <link rel="stylesheet" href="./mobileui/style.css">
+  <script src="./mobileui/mobileui.js"></script>
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./lib/vue.js"></script>
+  <script src="./lib/vue-router.js"></script>
 </head>
 
 <body>
+  <div id="app">
+    <div class="menu white" id="myMenu">
+      <div class="list no-border">
+        <router-link to="/" class="item" onclick="closeMenu('myMenu')">
+          <div class="left"><i class="icon ion-ios-home"></i></div>
+          <h1>Home page</h1>
+        </router-link>
+        <router-link to="/about" class="item" onclick="closeMenu('myMenu')">
+          <div class="left"><i class="icon ion-ios-search"></i></div>
+          <h1>About</h1>
+        </router-link>
+      </div>
+    </div>
+    <button class="blue" onclick="openMenu('myMenu')">menu</button>
+    <br>
+    <div class="padding content">
+      <router-view />
+    </div>
+  </div>
+  <script>
+    var Home = Vue.component('cp-home', {
+      template: '<div class="align-center"><h1>MobileUI + VueJS = <strong class="text-red"><3</strong></h1></div>'
+    })
 
+    var About = Vue.component('cp-about', {
+      template: `
+        <div>
+          <h1>
+            About this template
+          </h1>
+          <p>
+            Lib: Vue.js
+          </p>
+        </div>
+      `
+    })
+
+    var router = new VueRouter({
+      routes: [
+        {
+          path: '/',
+          component: Home
+        },
+        {
+          path: '/about',
+          component: About
+        }
+      ]
+    })
+
+    var app = new Vue({
+      el: '#app',
+      router,
+      data: function () {
+        return {
+          title: 'MobileUI + Vue.js = <3'
+        }
+      }
+    })
+  </script>
+  <script type="text/javascript" src="mobileui/mobileui.js"></script>
 </body>
 
 </html>
