@@ -5,6 +5,7 @@
     "css/index.css",
     "js/index.js",
     "lib/vue.min.js",
+    "lib/vue-router.min.js",
     "index.html"
   ]
 }
